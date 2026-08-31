@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: render_test_app
+    env: ruby
+    region: frankfurt
+    buildCommand: "bundle install && npm install && RAILS_ENV=production bundle exec rails assets:precompile"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase: render_test_app
+
+databases:
+  - name: render_test_app
+    region: frankfurt
+    plan: starter
