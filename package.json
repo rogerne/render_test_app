@@ -17,7 +17,8 @@
     "esbuild": "^0.28.2",
     "esbuild-wasm": "^0.28.2",
     "postcss": "^8.5.26",
-    "postcss-cli": "^11.0.1"
+    "postcss-cli": "^11.0.1",
+    "sass-embedded": "^1.104.0"
   },
   "dependencies": {
     "@hotwired/stimulus": "^3.2.2",
